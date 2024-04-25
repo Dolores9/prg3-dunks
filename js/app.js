@@ -36,27 +36,27 @@ function makeDataCard(data) {
 
         let favoriteBtn = document.createElement('button');
         favoriteBtn.classList.add('favoriteBtn');
-        favoriteBtn.innerHTML = "🤍";
+        favoriteBtn.innerHTML = "➕";
 
     
         let isFavorite = JSON.parse(localStorage.getItem(`favoriteItem-${card.id}`)) || false;
 
-        // Set the innerHTML of the button according to stored state
+       
         if (isFavorite) {
-            favoriteBtn.innerHTML = "❤️";
+            favoriteBtn.innerHTML = "✔️";
           } else {
-            favoriteBtn.innerHTML = "🤍";
+            favoriteBtn.innerHTML = "➕";
           }
         
         favoriteBtn.addEventListener('click',()=>{
             if(!isFavorite){
                 localStorage.setItem(`favoriteItem-${card.id}`, JSON.stringify(true));
                 isFavorite = true;  
-                favoriteBtn.innerHTML = "❤️";
+                favoriteBtn.innerHTML = "✔️";
             }else{
                 localStorage.removeItem(`favoriteItem-${card.id}`);
                 isFavorite = false;
-                favoriteBtn.innerHTML = "🤍";
+                favoriteBtn.innerHTML = "➕";
             }
         });
         
@@ -68,18 +68,18 @@ function makeDataCard(data) {
         dunkCard.appendChild(image);
         
         let price = document.createElement('h3')
-        price.classList.add('product-price');
+        price.classList.add('dunk-price');
         price.innerHTML = `${card.price}`;
         dunkCard.appendChild(price);
         
         let name = document.createElement('h2');
-        name.classList.add('product-name');
+        name.classList.add('dunk-name');
         name.innerHTML = `${card.name}`;
         dunkCard.appendChild(name);
 
         let detailsBtn = document.createElement('button');
         detailsBtn.classList.add('detailsBtn');
-        detailsBtn.innerHTML = '';
+        detailsBtn.innerHTML = 'details';
         detailsBtn.dataset.id = card.id;
         detailsBtn.addEventListener('click', () => {
             ajaxRequest(`${apiUrl}?id=${card.id}`, showDetails)
@@ -100,19 +100,17 @@ function showDetails(card) {
     detailsCard.innerHTML = "";
     // detailsCard.style.display = 'block';
 
-    //add content title:
-    let detailsName = document.createElement("h2")
-    detailsName.innerHTML = card.detailsCard + 'Details:';
-    detailsCard.appendChild(detailsName);
+
+ 
 
     //add description
     let description = document.createElement("p");
     description.innerHTML = card.description;
     detailsCard.appendChild(description);
 
-    let category = document.createElement("h5");
-    category.innerHTML = 'Categorie:' + '' + card.tags;
-    detailsCard.appendChild(category);
+    let style = document.createElement("h5");
+    style.innerHTML = 'Style:' + '' + card.tags;
+    detailsCard.appendChild(style);
 
     console.log(card.description)
 

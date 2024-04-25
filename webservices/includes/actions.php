@@ -3,7 +3,7 @@
 /**
  * @return array
  */
-function getProducts()
+function getDunks()
 {
     return [
         [
@@ -40,13 +40,13 @@ function getProducts()
             "id" => 6,
             "name" => "Nike Dunks SE",
             "price" => "€ 200",
-            "image" => "./images/dunk-se.jpeg",
+            "image" => "./images/dunk-se.jpg",
         ],
         [
             "id" => 7,
             "name" => "Nike Dunks for kids",
             "price" => "€ 70",
-            "image" => "./images/child.jpeg",
+            "image" => "./images/child.jpg",
         ],
         [
             "id" => 8,
@@ -62,7 +62,7 @@ function getProducts()
         ],
         [
             "id" => 10,
-            "name" => "Black and Orange Nike Dunks",
+            "name" => "Almost Black Nike Dunks",
             "price" => "€ 110",
             "image" => "./images/black-orange.jpg",
         ]
@@ -73,61 +73,84 @@ function getProducts()
  * @param $id
  * @return mixed
  */
-function getProductDetails($id)
+function getDunksDetails($id)
 {
     $tags = [
         1 => [
-            "description" => "<strong>Beschrijving:</strong> Baby blauwe Dunks speciaal gemaakt voor de mooi boys onder ons",
+            "description" => "I feel so unsure
+            As I take your hand and lead you to the dance floor
+            As the music dies, something in your eyes
+            Calls to mind a silver screen
+            And all its sad good-byes",
             "tags" => ['Casual']
         ],
         2 => [
-            "description" => "<strong>Beschrijving:</strong> ",
+            "description" => "I'm never gonna dance again
+            Guilty feet have got no rhythm
+            Though it's easy to pretend
+            I know you're not a fool ",
             "tags" => ['Casual']
         ],
         3 => [
-            "description" => "<strong>Beschrijving:</strong> tomaten.",
+            "description" => "I should've known better than to cheat a friend
+            And waste the chance that I'd been given
+            So I'm never gonna dance again
+            The way I danced with you, oh",
             "tags" => ['Sporty']
         ],
         4 => [
-            "description" => "<strong>Beschrijving:</strong> melk*, zout, zuursel, vegetarisch stremsel.
-            Waarvan toegevoegde suikers 0.00g per 100 gram en waarvan toegevoegd zout 1.90g per 100 gram
-            *Van weidemelk.",
+            "description" => "Time can never mend
+            The careless whispers of a good friend
+            To the heart and mind
+            Ignorance is kind
+            There's no comfort in the truth
+            Pain is all you'll find",
             "tags" => ['Bright']
         ],
         5 => [
-            "description" => "<strong>Beschrijving:</strong> melk*, zout, zuursel, vegetarisch stremsel.
-            Waarvan toegevoegde suikers 0.00g per 100 gram en waarvan toegevoegd zout 1.90g per 100 gram
-            *Van weidemelk.",
+            "description" => "I'm never gonna dance again
+            Guilty feet have got no rhythm
+            Though it's easy to pretend
+            I know you're not a fool",
             "tags" => ['Bright']
         ],
         6 => [
-            "description" => "<strong>Beschrijving:</strong> melk*, zout, zuursel, vegetarisch stremsel.
-            Waarvan toegevoegde suikers 0.00g per 100 gram en waarvan toegevoegd zout 1.90g per 100 gram
-            *Van weidemelk.",
+            "description" => "I should've known better than to cheat a friend (should've known better, yeah)
+            And waste the chance that I'd been given
+            So I'm never gonna dance again
+            The way I danced with you, oh
+            Never without your love",
             "tags" => ['Skating']
         ],
         7 => [
-            "description" => "<strong>Beschrijving:</strong> melk*, zout, zuursel, vegetarisch stremsel.
-            Waarvan toegevoegde suikers 0.00g per 100 gram en waarvan toegevoegd zout 1.90g per 100 gram
-            *Van weidemelk.",
+            "description" => "Tonight the music seems so loud
+            I wish that we could lose this crowd
+            Maybe it's better this way
+            We'd hurt each other with the things we'd want to say",
             "tags" => ['Kids']
         ],
         8 => [
-            "description" => "<strong>Beschrijving:</strong> melk*, zout, zuursel, vegetarisch stremsel.
-            Waarvan toegevoegde suikers 0.00g per 100 gram en waarvan toegevoegd zout 1.90g per 100 gram
-            *Van weidemelk.",
+            "description" => "We could have been so good together
+            We could have lived this dance forever
+            But now, who's gonna dance with me?
+            Please stay",
             "tags" => ['Casual']
         ],
         9 => [
-            "description" => "<strong>Beschrijving:</strong> melk*, zout, zuursel, vegetarisch stremsel.
-            Waarvan toegevoegde suikers 0.00g per 100 gram en waarvan toegevoegd zout 1.90g per 100 gram
-            *Van weidemelk.",
+            "description" => "And I'm never gonna dance again
+            Guilty feet have got no rhythm
+            Though it's easy to pretend
+            I know you're not a fool",
             "tags" => ['Skating']
         ],
         10 => [
-            "description" => "<strong>Beschrijving:</strong> melk*, zout, zuursel, vegetarisch stremsel.
-            Waarvan toegevoegde suikers 0.00g per 100 gram en waarvan toegevoegd zout 1.90g per 100 gram
-            *Van weidemelk.",
+            "description" => "I should've known better than to cheat a friend
+            And waste the chance that I'd been given
+            So I'm never gonna dance again
+            The way I danced with you, oh
+            now that you're gone
+            (Now that you're gone) was what I did so wrong, so wrong
+            That you had to leave me alone?",
             "tags" => ['Sporty']
         ]
     ];
